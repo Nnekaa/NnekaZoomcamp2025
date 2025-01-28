@@ -61,3 +61,13 @@ WHERE DATE(lpep_pickup_datetime) = '2019-10-18'
 GROUP BY DATE(lpep_pickup_datetime), gz."Zone"
 HAVING SUM(total_amount)> 13000
 
+
+#QUESTION 6
+
+SELECT SUM(tip_amount) AS total_tip, gt."DOLocationID", gz."Zone"
+FROM green_tripdata_2019 gt
+JOIN green_zone_lookup gz
+ON gt."DOLocationID" = gz."LocationID"
+WHERE gz."Zone" = 'East Harlem North'
+GROUP BY gt."DOLocationID",gz."Zone"
+ORDER BY total_tip DESC
