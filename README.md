@@ -1,5 +1,6 @@
 # Week 1 Homework
 
+
 #QUESTION 3
 
 SELECT COUNT(*) AS trip_count,
