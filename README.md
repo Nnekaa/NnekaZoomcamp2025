@@ -1,6 +1,6 @@
 # Week 1 Homework
 
-#Question 3
+#QUESTION 3
 
 SELECT COUNT(*) AS trip_count,
 CASE
@@ -40,13 +40,19 @@ GROUP BY trip_mile_category
 
 
 #QUESTION 4
-SELECT DATE(lpep_pickup_datetime), MAX(trip_distance) AS max_trip_distance
+
+SELECT DATE(lpep_pickup_datetime),
+MAX(trip_distance) AS max_trip_distance
 FROM green_tripdata_2019
 GROUP BY DATE(lpep_pickup_datetime)
 ORDER BY max_trip_distance DESC
 
+
+
 #QUESTION 5
-SELECT DATE(lpep_pickup_datetime), SUM(total_amount) AS tm, gz."Zone"
+
+SELECT DATE(lpep_pickup_datetime),
+SUM(total_amount) AS tm, gz."Zone"
 FROM green_tripdata_2019 gt
 JOIN green_zone_lookup gz
 ON gt."PULocationID" = gz."LocationID"
