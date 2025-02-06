@@ -1,0 +1,17 @@
+Module 2 Homework - Workflow Orchestration
+
+3. How many rows are there for the Yellow Taxi data for all CSV files in the year 2020?
+  SELECT COUNT(*) 
+  FROM `kestra-450108.zoomcamp.yellow_tripdata` 
+  WHERE EXTRACT(YEAR FROM tpep_pickup_datetime) = 2020;
+
+4. How many rows are there for the Green Taxi data for all CSV files in the year 2020?
+  SELECT COUNT(*) 
+  FROM `kestra-450108.zoomcamp.GREEN_tripdata` 
+  WHERE EXTRACT(YEAR FROM tpep_pickup_datetime) = 2020;
+
+5. How many rows are there for the Yellow Taxi data for the March 2021 CSV file?
+  SELECT COUNT(*) 
+  FROM `kestra-450108.zoomcamp.yellow_tripdata` 
+  WHERE EXTRACT(YEAR FROM tpep_pickup_datetime) = 2021
+  AND EXTRACT(MONTH FROM tpep_pickup_datetime) = 3; 
